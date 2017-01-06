@@ -1,8 +1,7 @@
 Electron ZeroChess
 ==================
 
-A platform independent version of ZeroChess 
- (a quick port of the ZeroNet app + ElectronChess)
+ZeroChess, a mashup of the ZeroNet app including;
 
 * chessboard.js: https://github.com/oakmac/chessboardjs
 * chess.js:      https://github.com/glinscott/garbochess-js

@@ -1,0 +1,53 @@
+{
+  "name": "ZeroChess",
+  "productName": "ZeroChess",
+  "version": "0.0.2",
+  "description": "ZeroChess for Electron",
+  "author": "Andrew Kidoo",
+  "main": "main.js",
+  "build": {
+    "appId": "com.github.kustomzone.zerochess",
+    "app-category-type": "Game Demo",
+    "win": {
+      "title": "ZeroChess",
+	  "version": "0.0.2",
+	  "icon": "app/icons/app.ico",
+	  "publisher": "Kustomzone Productionz"
+    },
+    "mac": {
+      "icon": "resources/osx/icon.icns"
+    },
+    "dmg": {
+      "icon": "resources/osx/dmg-icon.icns",
+      "background": "resources/osx/dmg-background.png"
+    }
+  },
+  "directories": {
+    "buildResources": "resources"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "build --win",
+    "prerelease": "build --env=production",
+    "release": "build --x64 --publish never",
+    "postinstall": "install-app-deps && npm run rebuild-sqlite3-win", 
+    "rebuild-sqlite3-win": "cd app/node_modules/node-sqlite3 && npm install nan --save && npm run prepublish && node-gyp configure --module_name=node_sqlite3 --module_path=../lib/binding/node-v50-win32-x64 && node-gyp node-gyp rebuild --target=1.4.2 --arch=x64 --target_platform=win32 --dist-url=https://atom.io/download/atom-shell --module_name=node_sqlite3 --module_path=../lib/binding/node-v50-win32-x64"
+  },
+  "devDependencies": {
+    "electron": "^1.4.4",
+	"electron-installer-windows": "^0.2.0",
+    "electron-builder": "^5.12.1",
+    "electron-packager": "^7.7.0",
+    "electron-prebuilt": "^0.36.4"
+  },
+  "dependencies": {
+    "asar": "^0.12.2",
+    "electron-packager": "^7.7.0",
+    "electron-installer-windows": "^0.2.0",
+    "electron": "^1.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kustomzone/zerochess.git"
+  }
+}
