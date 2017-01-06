@@ -1,11 +1,11 @@
 Electron ZeroChess
 ==================
 
-ZeroChess, a mashup of the ZeroNet app including;
+ZeroChess is a mashup of the ZeroNet app including;
 
-* chessboard.js: https://github.com/oakmac/chessboardjs
-* chess.js:      https://github.com/glinscott/garbochess-js
-* chess2.js:     https://github.com/jhlywa/chess.js
+* chessboard.js  : https://github.com/oakmac/chessboardjs
+* garbochess.js  : https://github.com/glinscott/garbochess-js
+* jhlywachess.js : https://github.com/jhlywa/chess.js
 
 ## Install
 
